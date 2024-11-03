@@ -4,7 +4,6 @@ import masks
 def mask_account_card(card_info: str) -> str:
     """Принимает тип и номер карты/счета, возвращает замаскированный номер карты/счета"""
     card_infolist = card_info.split()
-    print(card_infolist)
     if card_infolist[0] == "Счет":
         returned_number = masks.get_mask_account(card_infolist.pop(-1))
     else:
@@ -19,6 +18,3 @@ def get_date(core_date: str) -> str:
     core_date_list = core_date.split("-")
     returned_date = core_date_list[2][:2] + "." + core_date_list[1] + "." + core_date_list[0]
     return returned_date
-
-
-print(mask_account_card("Maestro 1596837868705199"))
