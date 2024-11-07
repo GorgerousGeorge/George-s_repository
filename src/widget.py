@@ -1,4 +1,4 @@
-import masks
+from src import masks
 
 
 def mask_account_card(card_info: str) -> str:
@@ -9,8 +9,8 @@ def mask_account_card(card_info: str) -> str:
     else:
         returned_number = masks.get_mask_card_number(card_infolist.pop(-1))
     card_infolist.append(returned_number)
-    card_infolist = " ".join(card_infolist)
-    return str(card_infolist)
+    masked_number = " ".join(card_infolist)
+    return str(masked_number)
 
 
 def get_date(core_date: str) -> str:
