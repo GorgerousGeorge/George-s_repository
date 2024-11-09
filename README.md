@@ -4,10 +4,15 @@
 Проект будет на бекенде готовить данные для отображения в виджете с несколькими последними успешными банковскими операциями клиента
 
 ## Установка
-*описание будет добавлено позже*
+1. Клонируйте репозиторий
+2. Установите зависимости
 
 ## Использование
-*описание будет добавлено позже*
+###Функции проекта:
+- **mask_account_card**: принимает строку, содержащую тип и номер карты или счета. Возвращает строку с замаскированным номером карты/счета
+- **get_date**: принимает строку с датой в формате iso 8601. Возвращает строку с датой в формате ДД.ММ.ГГГГ
+- **filter_by_state**: Принимает список словарей и опционально значение для ключа state. Функция возвращает новый список словарей, содержащий только те словари, у которых ключ state соответствует указанному значению (по умолчанию - "EXECUTED")
+- **sort_by_date**: Принимает список словарей. Возвращает новый список, отсротированный по дате. По умолчанию сортировка идет по убыванию, чтобы изменить порядок - при вызове функции вторым аргументом необходимо передать булевое значение "False"
 
 ## Документация
 *описание будет добавлено позже*
@@ -33,3 +38,4 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
