@@ -4,10 +4,15 @@ from src import masks
 def mask_account_card(card_info: str) -> str:
     """Принимает тип и номер карты/счета, возвращает замаскированный номер карты/счета"""
     card_infolist = card_info.split()
-    if card_infolist[0] == "Счет":
+    if card_infolist[0] == "Счет" or card_infolist[0] == card_infolist[-1]:
+        if card_infolist[-1] == "Счет":
+            return "номер счета не указан"
         returned_number = masks.get_mask_account(card_infolist.pop(-1))
     else:
-        returned_number = masks.get_mask_card_number(card_infolist.pop(-1))
+        if card_infolist[-1].isdigit():
+            returned_number = masks.get_mask_card_number(card_infolist.pop(-1))
+        else:
+            return "номер карты не указан"
     card_infolist.append(returned_number)
     masked_number = " ".join(card_infolist)
     return str(masked_number)
