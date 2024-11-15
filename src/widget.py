@@ -6,7 +6,7 @@ def mask_account_card(card_info: str) -> str:
     if card_info == "":
         return "нет данных"
     card_infolist = card_info.split()
-    if card_infolist[0] == "Счет" or card_infolist[0] == card_infolist[-1]:
+    if card_infolist[0] == "Счет" or ( card_infolist[0] == card_infolist[-1] and len(card_infolist[0]) == 20):
         if card_infolist[-1] == "Счет":
             return "номер счета не указан"
         returned_number = masks.get_mask_account(card_infolist.pop(-1))
