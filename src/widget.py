@@ -23,5 +23,8 @@ def mask_account_card(card_info: str) -> str:
 def get_date(core_date: str) -> str:
     """Принимает дату и время в формате ISO 8601, возвращает дату в формате ДД.ММ.ГГГГ"""
     core_date_list = core_date.split("-")
-    returned_date = core_date_list[2][:2] + "." + core_date_list[1] + "." + core_date_list[0]
-    return returned_date
+    if core_date_list[0].isdigit() and core_date_list[1].isdigit() and core_date_list[2][:2].isdigit and len(
+            core_date_list) == 3:
+        returned_date = core_date_list[2][:2] + "." + core_date_list[1] + "." + core_date_list[0]
+        return returned_date
+    return "некорректный формат даты"
