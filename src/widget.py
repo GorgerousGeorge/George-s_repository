@@ -3,6 +3,8 @@ from src import masks
 
 def mask_account_card(card_info: str) -> str:
     """Принимает тип и номер карты/счета, возвращает замаскированный номер карты/счета"""
+    if card_info == "":
+        return "нет данных"
     card_infolist = card_info.split()
     if card_infolist[0] == "Счет" or card_infolist[0] == card_infolist[-1]:
         if card_infolist[-1] == "Счет":
