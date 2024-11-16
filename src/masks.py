@@ -8,7 +8,7 @@ def get_mask_card_number(card_number: Any) -> str:
     if card_number.isdigit() and 12 < len(card_number) < 20:
         masked_card_number = card_number[:4] + " " + card_number[4:6] + "** **** " + card_number[-4:]
         return str(masked_card_number)
-    return "некорректный номер карты"
+    raise ValueError("некорректный номер карты")
 
 
 def get_mask_account(account_number: Any) -> str:
@@ -18,4 +18,4 @@ def get_mask_account(account_number: Any) -> str:
     if account_number.isdigit() and len(account_number) == 20:
         masked_account = "**" + account_number[-4:]
         return str(masked_account)
-    return "некорректный номер счета"
+    raise ValueError("некорректный номер счета")

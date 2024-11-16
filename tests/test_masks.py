@@ -5,16 +5,16 @@ from src.masks import get_mask_account
 
 
 @pytest.mark.parametrize("value, expected", [
-    (numbers_16, "7000 79** **** 6361"),
-    (numbers_16_spases, "7000 79** **** 6361"),
-    (numbers_16_int, "7000 79** **** 6361"),
-    (numbers_20, "некорректный номер карты"),
-    (numbers_19, "7000 79** **** 1123"),
-    (numbers_13, "7000 79** **** 9606"),
-    (numbers_12, "некорректный номер карты"),
-    (letters, "некорректный номер карты"),
-    (numbers_and_letters, "некорректный номер карты"),
-    (blank, "некорректный номер карты")
+    (pytest.param("numbers_16", "7000 79** **** 6361")),
+    (pytest.param("numbers_16_spases", "7000 79** **** 6361")),
+    (pytest.param("numbers_16_int", "7000 79** **** 6361")),
+    (pytest.param("numbers_20", "некорректный номер карты")),
+    (pytest.param("numbers_19", "7000 79** **** 1123")),
+    (pytest.param("numbers_13", "7000 79** **** 9606")),
+    (pytest.param("numbers_12", "некорректный номер карты")),
+    (pytest.param("letters", "некорректный номер карты")),
+    (pytest.param("numbers_and_letters", "некорректный номер карты")),
+    (pytest.param("blank", "некорректный номер карты"))
 ])
 def test_get_mask_card_number(value, expected):
     assert get_mask_card_number(value) == expected
