@@ -27,7 +27,6 @@ def test_get_mask_card_number_valueerror(value, expected):
         get_mask_card_number(value) == expected
 
 
-
 @pytest.mark.parametrize("value, expected", [
     (numbers_20, "**1234"),
     (numbers_20_spases, "**1234"),
