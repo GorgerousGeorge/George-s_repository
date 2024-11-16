@@ -71,22 +71,22 @@ def blank():
 
 @pytest.mark.parametrize("value, expected", [
     ("7000792289606361", "7000 79** **** 6361"),
-    ("numbers_16", "7000 79** **** 6361"),
-    ("numbers_16_spases", "7000 79** **** 6361"),
-    ("numbers_16_int", "7000 79** **** 6361"),
-    ("numbers_19", "7000 79** **** 1123"),
-    ("numbers_13", "7000 79** **** 9606")
+    (numbers_16, "7000 79** **** 6361"),
+    (numbers_16_spases, "7000 79** **** 6361"),
+    (numbers_16_int, "7000 79** **** 6361"),
+    (numbers_19, "7000 79** **** 1123"),
+    (numbers_13, "7000 79** **** 9606")
 ])
 def test_get_mask_card_number(value, expected):
     assert get_mask_card_number(value) == expected
 
 
 @pytest.mark.parametrize("value, expected", [
-    ("numbers_20", "некорректный номер карты"),
-    ("numbers_12", "некорректный номер карты"),
-    ("letters", "некорректный номер карты"),
-    ("numbers_and_letters", "некорректный номер карты"),
-    ("blank", "некорректный номер карты")
+    (numbers_20, "некорректный номер карты"),
+    (numbers_12, "некорректный номер карты"),
+    (letters, "некорректный номер карты"),
+    (numbers_and_letters, "некорректный номер карты"),
+    (blank, "некорректный номер карты")
 ])
 def test_get_mask_card_number_valueerror(value, expected):
     with pytest.raises(ValueError):
