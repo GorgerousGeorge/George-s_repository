@@ -92,8 +92,7 @@ def test_dict_list_incorrect_date_second_version():
 
 @pytest.fixture
 def test_transactions():
-    return [
-        {
+    return [{
             "id": 939719570,
             "state": "EXECUTED",
             "date": "2018-06-30T02:08:58.425572",
