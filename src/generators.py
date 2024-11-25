@@ -2,9 +2,14 @@ def filter_by_currency(transaction_list: list[dict], valute: str = "USD") -> dic
     """Принимает список словарей, представляющих транзакции. Возвращает по одному словарю из списка, в котором валюта
     операции соответствует заданной (по умолчанию USD, для изменения вторым аргументом надо передать буквенный код
     валюты)"""
+    i =  0
     for transaction in transaction_list:
         if transaction["operationAmount"]["currency"]["code"] == valute:
             yield transaction
+        i += 1
+        if transaction_list[i] == False:
+            raise IndexError("Больше нет операций в выбранной валюте")
+
 
 
 def transaction_descriptions(transaction_list: list[dict]) -> str:

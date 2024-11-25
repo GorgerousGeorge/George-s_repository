@@ -237,7 +237,8 @@ def test_filter_by_currency_manual_currency():
         "to": "Счет 14211924144426031657"
     }
 
-def test_filter_by_currency_manual_currency():
+
+def test_filter_by_currency_not_currency():
     generator = filter_by_currency([
         {
             "id": 939719570,
@@ -315,3 +316,11 @@ def test_filter_by_currency_manual_currency():
             "to": "Счет 14211924144426031657"
         }
     ], "EUR")
+    with pytest.raises(IndexError):
+        next(generator) == "Больше нет операций в выбранной валюте"
+
+
+def test_filter_by_currency_not_list():
+    generator = filter_by_currency([])
+    with pytest.raises(StopIteration):
+        next(generator) == StopIteration
