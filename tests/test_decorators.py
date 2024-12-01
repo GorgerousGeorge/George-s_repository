@@ -41,4 +41,4 @@ def test_log_error_console(capsys):
     with pytest.raises(ValueError):
         error_function_console()
         captured = capsys.readouterr()
-        assert captured.out == "error_function_console error: Something went wrong!. Inputs: (), {}"
+        assert captured.out == "error_function_console error: Something went wrong!. Inputs: (), {}\n"

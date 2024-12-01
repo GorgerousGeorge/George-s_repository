@@ -7,9 +7,9 @@ def log(filename: str = "DEFAULT"):
         def wrapper(*args, **kwargs):
             try:
                 result = func(*args, **kwargs)
-
             except Exception as e:
                 logging = f"{func.__name__} error: {e}. Inputs: {args}, {kwargs}"
+                result = None
             else:
                 logging = f"{func.__name__} ok"
             if filename == "DEFAULT":
@@ -24,5 +24,3 @@ def log(filename: str = "DEFAULT"):
         return wrapper
 
     return decorator
-
-
