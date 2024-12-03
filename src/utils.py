@@ -10,6 +10,3 @@ def transaction_returner(path: str) -> list[dict]:
                 returned_list = content
     finally:
         return returned_list
-
-
-print(transaction_returner('C:\\Users\\racco\\PycharmProjects\\Vidget_Operations_Project\\data\\operations.json'))
