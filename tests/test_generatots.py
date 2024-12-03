@@ -1,6 +1,6 @@
 import pytest
 
-from src.generators import filter_by_currency, transaction_descriptions, card_number_generator
+from src.generators import card_number_generator, filter_by_currency, transaction_descriptions
 
 
 def test_filter_by_currency_default(test_transactions):
@@ -18,13 +18,13 @@ def test_filter_by_currency_manual_currency(test_transactions):
 def test_filter_by_currency_not_currency(test_transactions):
     generator = filter_by_currency(test_transactions, "EUR")
     with pytest.raises(StopIteration):
-        next(generator) == StopIteration
+        next(generator)
 
 
 def test_filter_by_currency_not_list():
     generator = filter_by_currency([])
     with pytest.raises(StopIteration):
-        next(generator) == StopIteration
+        next(generator)
 
 
 def test_transaction_descriptions(test_transactions):
@@ -37,7 +37,7 @@ def test_transaction_descriptions(test_transactions):
 def test_transaction_descriptions():
     generator = filter_by_currency([])
     with pytest.raises(StopIteration):
-        next(generator) == StopIteration
+        next(generator)
 
 
 def test_card_number_generator_min():
