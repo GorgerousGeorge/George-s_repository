@@ -23,7 +23,7 @@ def converter_into_rubles(transaction: dict) -> float:
         url = f"https://api.apilayer.com/exchangerates_data/convert?to=RUB&from={transaction["operationAmount"]
         ["code"]}&amount={transaction["operationAmount"]["amount"]}"
         response = requests.request("GET", url, headers=headers, data=payload)
-        result = response.text
+        result = float(response.text)
         return result
     else:
         raise ValueError("неподходящая валюта для конвертации")
