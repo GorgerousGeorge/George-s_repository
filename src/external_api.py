@@ -1,32 +1,34 @@
 import os
 
 import requests
+import json
 
 from dotenv import load_dotenv
 
 load_dotenv()
 
-API_KEY = os.getenv("API_KEY")
-
 payload = {}
 headers = {
-    "apikey": API_KEY
+    "apikey": os.getenv("API_KEY")
 }
 
 
 def converter_into_rubles(transaction: dict) -> float:
     """Принимает на вход словарь с информацией о транзакции. Возвращает сумму транзакции в рублях. Поддерживает валюты
     RUB, USD, EUR"""
-    if transaction["operationAmount"]["code"] == "RUB":
+    if transaction["operationAmount"]["currency"]["code"] == "RUB":
         return transaction["operationAmount"]["amount"]
-    elif transaction["operationAmount"]["code"] == "USD" or transaction["operationAmount"]["code"] == "EUR":
+    elif transaction["operationAmount"]["currency"]["code"] == "USD" or transaction["operationAmount"]["code"] == "EUR":
         url = f"https://api.apilayer.com/exchangerates_data/convert?to=RUB&from={transaction["operationAmount"]
-        ["code"]}&amount={transaction["operationAmount"]["amount"]}"
+        ["currency"]["code"]}&amount={transaction["operationAmount"]["amount"]}"
         response = requests.request("GET", url, headers=headers, data=payload)
         result = response.text
-        return result
+        result = json.loads(result)
+        print(result)
+        return round(result["result"], 2)
     else:
         raise ValueError("неподходящая валюта для конвертации")
+
 
 print(converter_into_rubles({
     "id": 441945886,
