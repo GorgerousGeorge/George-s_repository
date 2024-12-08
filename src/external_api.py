@@ -17,7 +17,7 @@ def converter_into_rubles(transaction: dict) -> float:
     """Принимает на вход словарь с информацией о транзакции. Возвращает сумму транзакции в рублях. Поддерживает валюты
     RUB, USD, EUR"""
     if transaction["operationAmount"]["currency"]["code"] == "RUB":
-        return transaction["operationAmount"]["amount"]
+        return float(transaction["operationAmount"]["amount"])
     elif (transaction["operationAmount"]["currency"]["code"] == "USD" or
           transaction["operationAmount"]["currency"]["code"] == "EUR"):
         url = f"https://api.apilayer.com/exchangerates_data/convert?to=RUB&from={transaction["operationAmount"]
