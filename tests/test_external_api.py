@@ -1,7 +1,9 @@
-import pytest
-from src.external_api import converter_into_rubles
-from unittest.mock import patch
 import json
+from unittest.mock import patch
+
+import pytest
+
+from src.external_api import converter_into_rubles
 
 
 @patch("requests.request")
