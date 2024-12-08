@@ -169,6 +169,7 @@ def test_transactions():
         }
     ]
 
+
 @pytest.fixture
 def list_transactions_from_json():
     return [
@@ -1664,3 +1665,4 @@ def list_transactions_from_json():
     "to": "Счет 96527012349577388612"
   }
 ]
+

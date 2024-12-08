@@ -1,7 +1,6 @@
 import pytest
 from src.external_api import converter_into_rubles
 from unittest.mock import patch
-import requests
 import json
 
 

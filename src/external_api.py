@@ -20,8 +20,9 @@ def converter_into_rubles(transaction: dict) -> float:
         return float(transaction["operationAmount"]["amount"])
     elif (transaction["operationAmount"]["currency"]["code"] == "USD" or
           transaction["operationAmount"]["currency"]["code"] == "EUR"):
-        url = f"https://api.apilayer.com/exchangerates_data/convert?to=RUB&from={transaction["operationAmount"]
-        ["currency"]["code"]}&amount={transaction["operationAmount"]["amount"]}"
+        url = (f"https://api.apilayer.com/exchangerates_data/convert?to=RUB&from="
+               f"{transaction["operationAmount"]["currency"]["code"]}&amount="
+               f"{transaction["operationAmount"]["amount"]}")
         response = requests.request("GET", url, headers=headers, data=payload)
         result = response.text
         result = json.loads(result)

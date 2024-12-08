@@ -1,5 +1,3 @@
-import pytest
-
 from src.utils import transaction_returner
 
 
@@ -21,5 +19,4 @@ def test_transaction_returner_not_list():
 def test_transaction_returner_incorrect_path():
     assert (transaction_returner('C:\\Users\\racco\\PycharmProjects\\Vidget_Operations_Project\\data\\somename.json')
             == [])
-
 
