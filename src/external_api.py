@@ -25,6 +25,7 @@ def converter_into_rubles(transaction: dict) -> float:
         response = requests.request("GET", url, headers=headers, data=payload)
         result = response.text
         result = json.loads(result)
+        print(result)
         return round(result["result"], 2)
     else:
         raise ValueError("неподходящая валюта для конвертации")
