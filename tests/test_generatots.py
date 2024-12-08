@@ -15,6 +15,7 @@ def test_filter_by_currency_manual_currency(test_transactions):
     assert next(generator) == test_transactions[2]
     assert next(generator) == test_transactions[4]
 
+
 def test_filter_by_currency_not_currency(test_transactions):
     generator = filter_by_currency(test_transactions, "EUR")
     with pytest.raises(StopIteration):
