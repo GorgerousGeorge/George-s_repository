@@ -25,24 +25,6 @@ def converter_into_rubles(transaction: dict) -> float:
         response = requests.request("GET", url, headers=headers, data=payload)
         result = response.text
         result = json.loads(result)
-        print(result)
         return round(result["result"], 2)
     else:
         raise ValueError("неподходящая валюта для конвертации")
-
-
-print(converter_into_rubles({
-    "id": 441945886,
-    "state": "EXECUTED",
-    "date": "2019-08-26T10:50:58.294041",
-    "operationAmount": {
-        "amount": "31957.58",
-        "currency": {
-            "name": "руб.",
-            "code": "USD"
-        }
-    },
-    "description": "Перевод организации",
-    "from": "Maestro 1596837868705199",
-    "to": "Счет 64686473678894779589"
-}))
