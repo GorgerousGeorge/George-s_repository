@@ -20,7 +20,7 @@ def transaction_returner(path: str) -> list[dict]:
             content = json.load(json_file)
             if isinstance(content, list):
                 returned_list = content
-                logger.info(f"Содержание файла корректное, возвращаем список")
+                logger.info("Содержание файла корректное, возвращаем список")
             else:
                 logger.error(f"Некорректный ввод. Файл {path} содержит не список")
     except Exception as exce:
