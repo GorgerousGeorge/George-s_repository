@@ -9,6 +9,7 @@ def reader_from_csv(path: str) -> list[dict]:
     try:
         with open(path, encoding="utf-8") as file:
             reader = csv.DictReader(file)
+            print(reader)
             for row in reader:
                 returned_list.append(row)
     finally:
