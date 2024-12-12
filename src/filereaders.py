@@ -2,6 +2,7 @@ import csv
 
 import pandas as pd
 
+
 def reader_from_csv(path: str) -> list[dict]:
     """Принимает на вход путь к файлу csv. Возвращает список словарей из файла"""
     returned_list = []
@@ -22,4 +23,3 @@ def reader_from_excel(path: str) -> list[dict]:
         returned_list = reader.to_dict(orient="records")
     finally:
         return returned_list
-
