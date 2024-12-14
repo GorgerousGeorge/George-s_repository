@@ -6,6 +6,8 @@ from unittest.mock import patch
 
 import csv
 
+import pandas as pd
+
 
 @patch("csv.DictReader")
 def test_reader_from_csv(mock_datafiles):
@@ -18,8 +20,12 @@ def test_reader_from_csv_not_files():
     assert reader_from_csv("C:\\Users\\Lenovo\\PycharmProjects\\George-s_repository\\data\\qwerty.csv") == []
 
 
-@patch("reader.to_dict")
+@patch("pandas.read_excel")
 def test_reader_from_excel(mock_datafiles):
-    mock_datafiles.return_value = [{"test": "1"}]
+    mock_datafiles.return_value = pd.DataFrame({"test": ["1"]})
     assert (reader_from_excel("C:\\Users\\Lenovo\\PycharmProjects\\George-s_repository\\data\\transactions_excel.xlsx")
             == [{"test": "1"}])
+
+
+def test_reader_from_excel_not_files():
+    assert reader_from_csv("C:\\Users\\Lenovo\\PycharmProjects\\George-s_repository\\data\\qwerty.csv") == []

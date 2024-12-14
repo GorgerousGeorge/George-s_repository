@@ -24,3 +24,4 @@ def reader_from_excel(path: str) -> list[dict]:
         returned_list = reader.to_dict(orient="records")
     finally:
         return returned_list
+
