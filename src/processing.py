@@ -1,5 +1,6 @@
 from datetime import datetime
 import re
+from collections import Counter
 
 
 def filter_by_state(dict_list: list, state_value: str = "EXECUTED") -> list:
@@ -34,11 +35,12 @@ def filter_by_description(transaction_list: list[dict], search_value: str) -> li
 def counter_by_description(transaction_list: list[dict], description_list: list[str]) -> dict:
     """Принимает на вход список словарей с данными о банковских операциях и список категорий операций.
     Возвращает словарь, в котором ключи — это названия категорий, а значения — это количество операций
-    в каждой категории"""
-    returned_dict = {}
+    в каждой категории. Если категория была в передаваемом списке категорий операций, а в возвращенном словаре
+    ее нет - значит, количество операций с такой категорией равно 0"""
+    list_for_requirement = []
     for description in description_list:
-        returned_dict[description] = 0
         for transaction in transaction_list:
             if transaction["description"] == description:
-                returned_dict[description] += 1
+                list_for_requirement.append(transaction["description"])
+    returned_dict = Counter(list_for_requirement)
     return returned_dict
