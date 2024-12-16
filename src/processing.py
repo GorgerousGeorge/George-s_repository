@@ -21,7 +21,7 @@ def sort_by_date(dict_list: list, sort_by_date_descending: bool = True) -> list:
     return sorted_list
 
 
-def filter_by_description(transaction_list: list, search_value: str) -> list:
+def filter_by_description(transaction_list: list[dict], search_value: str) -> list[dict]:
     """Принимает список словарей и строковое значение. Возвращает список словарей, у которых ключ description
     соответствует строке из второго аргумента (в том числе частично)"""
     returned_list = []
@@ -30,3 +30,15 @@ def filter_by_description(transaction_list: list, search_value: str) -> list:
             returned_list.append(transaction)
     return returned_list
 
+
+def counter_by_description(transaction_list: list[dict], description_list: list[str]) -> dict:
+    """Принимает на вход список словарей с данными о банковских операциях и список категорий операций.
+    Возвращает словарь, в котором ключи — это названия категорий, а значения — это количество операций
+    в каждой категории"""
+    returned_dict = {}
+    for description in description_list:
+        returned_dict[description] = 0
+        for transaction in transaction_list:
+            if transaction["description"] == description:
+                returned_dict[description] += 1
+    return returned_dict
