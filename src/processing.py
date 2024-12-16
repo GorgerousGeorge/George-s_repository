@@ -40,7 +40,7 @@ def counter_by_description(transaction_list: list[dict], description_list: list[
     list_for_requirement = []
     for description in description_list:
         for transaction in transaction_list:
-            if transaction["description"] == description:
+            if transaction["description"] == description.title():
                 list_for_requirement.append(transaction["description"])
     returned_dict = Counter(list_for_requirement)
     return returned_dict
