@@ -1,4 +1,5 @@
 from datetime import datetime
+import re
 
 
 def filter_by_state(dict_list: list, state_value: str = "EXECUTED") -> list:
@@ -18,3 +19,14 @@ def sort_by_date(dict_list: list, sort_by_date_descending: bool = True) -> list:
         dict_list, key=lambda strindate: datetime.fromisoformat(strindate["date"]), reverse=sort_by_date_descending
     )
     return sorted_list
+
+
+def filter_by_description(transaction_list: list, search_value: str) -> list:
+    """Принимает список словарей и строковое значение. Возвращает список словарей, у которых ключ description
+    соответствует строке из второго аргумента (в том числе частично)"""
+    returned_list = []
+    for transaction in transaction_list:
+        if re.search(search_value, transaction["description"], flags=re.IGNORECASE):
+            returned_list.append(transaction)
+    return returned_list
+
