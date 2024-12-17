@@ -122,4 +122,3 @@ def main():
                     print(f"{get_date(transaction["date"])} {transaction["description"]}\n"
                           f"{mask_account_card(transaction["from"])} -> {mask_account_card(transaction["to"])}\n"
                           f"Сумма: {transaction["amount"]} {transaction["currency_name"]}")
-
