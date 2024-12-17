@@ -1,6 +1,6 @@
 import pytest
 
-from src.processing import filter_by_state, sort_by_date
+from src.processing import filter_by_state, sort_by_date, filter_by_description
 
 
 def test_filter_by_state_default_value(test_dict_list):
@@ -45,3 +45,16 @@ def test_sort_by_date_incorrect_formating_texting(test_dict_list_incorrect_date_
         sort_by_date(
             test_dict_list_incorrect_date_second_version) == ("Invalid isoformat string: 'четырнадцатое октября две"
                                                               "тысячи восемнадцатого года'")
+
+
+def test_filter_by_description(test_dict_list_with_description):
+    assert filter_by_description(test_dict_list_with_description, 'Перевод') == [{'id': 41428829,
+                                                                                  'state': 'EXECUTED',
+                                                                                  'date': '2019-07-03T18:35:29.512364',
+                                                                                  'description': 'Перевод'},
+                                                                                 {'id': 594226727, 'state': 'CANCELED',
+                                                                                  'date': '2018-09-12T21:27:25.241689',
+                                                                                  'description': 'Перевод'}]
+
+def test_filter_by_description_not_found(test_dict_list_with_description):
+    assert filter_by_description(test_dict_list_with_description, "Пополнение") == []
