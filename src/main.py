@@ -43,7 +43,6 @@ def main():
             break
         else:
             print(f"Статус операции {status_for_filter} недоступен")
-    print(transaction_list)
     transaction_list = filter_by_state(transaction_list, status_for_filter)
     while True:
         print("Отсортировать операции по дате? Да/Нет")
@@ -91,7 +90,7 @@ def main():
             user_description = input()
             transaction_list = filter_by_description(transaction_list, user_description)
             break
-        elif nswer_for_description.lower() == "нет" or nswer_for_description.lower() == "no":
+        elif answer_for_description.lower() == "нет" or answer_for_description.lower() == "no":
             break
         else:
             print("Ответ не распознан")
@@ -123,6 +122,3 @@ def main():
                     print(f"{get_date(transaction["date"])} {transaction["description"]}\n"
                           f"{mask_account_card(transaction["from"])} -> {mask_account_card(transaction["to"])}\n"
                           f"Сумма: {transaction["amount"]} {transaction["currency_name"]}")
-
-
-main()

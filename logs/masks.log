@@ -844,3 +844,12 @@
 2024-12-17 22:50:17,612 - utils.py - INFO: Открываем файл C:\Users\Lenovo\PycharmProjects\George-s_repository\src\..\data\operations.json
 2024-12-17 22:50:17,612 - utils.py - INFO: Открыли файл C:\Users\Lenovo\PycharmProjects\George-s_repository\src\..\data\operations.json успешно
 2024-12-17 22:50:17,613 - utils.py - INFO: Содержание файла корректное, возвращаем список
+2024-12-17 23:23:25,489 - utils.py - INFO: Открываем файл C:\Users\Lenovo\PycharmProjects\George-s_repository\src\..\data\operations.json
+2024-12-17 23:23:25,490 - utils.py - INFO: Открыли файл C:\Users\Lenovo\PycharmProjects\George-s_repository\src\..\data\operations.json успешно
+2024-12-17 23:23:25,490 - utils.py - INFO: Содержание файла корректное, возвращаем список
+2024-12-17 23:24:08,915 - utils.py - INFO: Открываем файл C:\Users\Lenovo\PycharmProjects\George-s_repository\src\..\data\operations.json
+2024-12-17 23:24:08,916 - utils.py - INFO: Открыли файл C:\Users\Lenovo\PycharmProjects\George-s_repository\src\..\data\operations.json успешно
+2024-12-17 23:24:08,916 - utils.py - INFO: Содержание файла корректное, возвращаем список
+2024-12-17 23:25:30,447 - utils.py - INFO: Открываем файл C:\Users\Lenovo\PycharmProjects\George-s_repository\src\..\data\operations.json
+2024-12-17 23:25:30,447 - utils.py - INFO: Открыли файл C:\Users\Lenovo\PycharmProjects\George-s_repository\src\..\data\operations.json успешно
+2024-12-17 23:25:30,448 - utils.py - INFO: Содержание файла корректное, возвращаем список
