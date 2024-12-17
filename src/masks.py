@@ -1,6 +1,6 @@
 import logging
-from typing import Any
 import os
+from typing import Any
 
 logger = logging.getLogger("masks")
 logger.setLevel(logging.DEBUG)

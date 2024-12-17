@@ -1,4 +1,5 @@
 import csv
+import os
 
 import pandas as pd
 
@@ -24,3 +25,6 @@ def reader_from_excel(path: str) -> list[dict]:
         returned_list = reader.to_dict(orient="records")
     finally:
         return returned_list
+
+print(reader_from_csv(f"{os.path.join(os.path.dirname(__file__), os.pardir)}\\data"
+                                               f"\\transactions.csv"))

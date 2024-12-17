@@ -1,6 +1,6 @@
-from datetime import datetime
 import re
 from collections import Counter
+from datetime import datetime
 
 
 def filter_by_state(dict_list: list, state_value: str = "EXECUTED") -> list:

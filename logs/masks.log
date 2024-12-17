@@ -521,3 +521,83 @@
 2024-12-14 11:53:32,751 - masks.py - INFO: Номер счета замаскирован
 2024-12-14 11:53:32,757 - masks.py - INFO: Маскируем карту с номером 1
 2024-12-14 11:53:32,758 - masks.py - ERROR: введен некорректный номер карты - 1
+2024-12-16 21:20:35,837 - masks.py - INFO: Маскируем карту с номером 7000792289606361
+2024-12-16 21:20:35,837 - masks.py - INFO: Номер карты замаскирован
+2024-12-16 21:20:35,838 - masks.py - INFO: Маскируем карту с номером 7000792289606361
+2024-12-16 21:20:35,838 - masks.py - INFO: Номер карты замаскирован
+2024-12-16 21:20:35,839 - masks.py - INFO: Маскируем карту с номером 7000792289606361
+2024-12-16 21:20:35,839 - masks.py - INFO: Номер карты замаскирован
+2024-12-16 21:20:35,840 - masks.py - INFO: Маскируем карту с номером 7000792289606361123
+2024-12-16 21:20:35,840 - masks.py - INFO: Номер карты замаскирован
+2024-12-16 21:20:35,841 - masks.py - INFO: Маскируем карту с номером 7000792289606
+2024-12-16 21:20:35,841 - masks.py - INFO: Номер карты замаскирован
+2024-12-16 21:20:35,842 - masks.py - INFO: Маскируем карту с номером 70007922896063611234
+2024-12-16 21:20:35,842 - masks.py - ERROR: введен некорректный номер карты - 70007922896063611234
+2024-12-16 21:20:35,843 - masks.py - INFO: Маскируем карту с номером 700079228960
+2024-12-16 21:20:35,843 - masks.py - ERROR: введен некорректный номер карты - 700079228960
+2024-12-16 21:20:35,844 - masks.py - INFO: Маскируем карту с номером тестовые_буквы
+2024-12-16 21:20:35,844 - masks.py - ERROR: введен некорректный номер карты - тестовые_буквы
+2024-12-16 21:20:35,845 - masks.py - INFO: Маскируем карту с номером a1b2c3d4e5f6g7h8i9j0
+2024-12-16 21:20:35,845 - masks.py - ERROR: введен некорректный номер карты - a1b2c3d4e5f6g7h8i9j0
+2024-12-16 21:20:35,846 - masks.py - INFO: Маскируем карту с номером 
+2024-12-16 21:20:35,846 - masks.py - ERROR: введен некорректный номер карты - 
+2024-12-16 21:20:35,847 - masks.py - INFO: Маскируем счет с номером 70007922896063611234
+2024-12-16 21:20:35,847 - masks.py - INFO: Номер счета замаскирован
+2024-12-16 21:20:35,848 - masks.py - INFO: Маскируем счет с номером 70007922896063611234
+2024-12-16 21:20:35,848 - masks.py - INFO: Номер счета замаскирован
+2024-12-16 21:20:35,849 - masks.py - INFO: Маскируем счет с номером 70007922896063611234
+2024-12-16 21:20:35,849 - masks.py - INFO: Номер счета замаскирован
+2024-12-16 21:20:35,850 - masks.py - INFO: Маскируем счет с номером 7000792289606361
+2024-12-16 21:20:35,850 - masks.py - ERROR: введен некорректный номер счета - 7000792289606361
+2024-12-16 21:20:35,851 - masks.py - INFO: Маскируем счет с номером 7000792289606361123
+2024-12-16 21:20:35,851 - masks.py - ERROR: введен некорректный номер счета - 7000792289606361123
+2024-12-16 21:20:35,852 - masks.py - INFO: Маскируем счет с номером тестовые_буквы
+2024-12-16 21:20:35,852 - masks.py - ERROR: введен некорректный номер счета - тестовые_буквы
+2024-12-16 21:20:35,853 - masks.py - INFO: Маскируем счет с номером a1b2c3d4e5f6g7h8i9j0
+2024-12-16 21:20:35,853 - masks.py - ERROR: введен некорректный номер счета - a1b2c3d4e5f6g7h8i9j0
+2024-12-16 21:20:35,854 - masks.py - INFO: Маскируем счет с номером 
+2024-12-16 21:20:35,854 - masks.py - ERROR: введен некорректный номер счета - 
+2024-12-16 21:20:35,855 - masks.py - INFO: Маскируем счет с номером 700079228960636112345
+2024-12-16 21:20:35,855 - masks.py - ERROR: введен некорректный номер счета - 700079228960636112345
+2024-12-16 21:20:35,863 - utils.py - INFO: Открываем файл C:\Users\Lenovo\PycharmProjects\George-s_repository\tests\..\data\operations.json
+2024-12-16 21:20:35,863 - utils.py - INFO: Открыли файл C:\Users\Lenovo\PycharmProjects\George-s_repository\tests\..\data\operations.json успешно
+2024-12-16 21:20:35,863 - utils.py - INFO: Содержание файла корректное, возвращаем список
+2024-12-16 21:20:35,864 - utils.py - INFO: Открываем файл C:\Users\Lenovo\PycharmProjects\George-s_repository\tests\..\data\empty.json
+2024-12-16 21:20:35,865 - utils.py - INFO: Открыли файл C:\Users\Lenovo\PycharmProjects\George-s_repository\tests\..\data\empty.json успешно
+2024-12-16 21:20:35,865 - utils.py - ERROR: Ошибка при попытке открыть файл C:\Users\Lenovo\PycharmProjects\George-s_repository\tests\..\data\empty.json: Expecting value: line 1 column 1 (char 0)
+2024-12-16 21:20:35,866 - utils.py - INFO: Открываем файл C:\Users\Lenovo\PycharmProjects\George-s_repository\tests\..\data\onedict.json
+2024-12-16 21:20:35,866 - utils.py - INFO: Открыли файл C:\Users\Lenovo\PycharmProjects\George-s_repository\tests\..\data\onedict.json успешно
+2024-12-16 21:20:35,866 - utils.py - ERROR: Некорректный ввод. Файл C:\Users\Lenovo\PycharmProjects\George-s_repository\tests\..\data\onedict.json содержит не список
+2024-12-16 21:20:35,867 - utils.py - INFO: Открываем файл C:\Users\Lenovo\PycharmProjects\George-s_repository\tests\..\data\somename.json
+2024-12-16 21:20:35,867 - utils.py - ERROR: Ошибка при попытке открыть файл C:\Users\Lenovo\PycharmProjects\George-s_repository\tests\..\data\somename.json: [Errno 2] No such file or directory: 'C:\\Users\\Lenovo\\PycharmProjects\\George-s_repository\\tests\\..\\data\\somename.json'
+2024-12-16 21:20:35,868 - masks.py - INFO: Маскируем карту с номером 7000792289606361
+2024-12-16 21:20:35,869 - masks.py - INFO: Номер карты замаскирован
+2024-12-16 21:20:35,869 - masks.py - INFO: Маскируем карту с номером 1234567890123456
+2024-12-16 21:20:35,870 - masks.py - INFO: Номер карты замаскирован
+2024-12-16 21:20:35,870 - masks.py - INFO: Маскируем карту с номером 2200123456789010
+2024-12-16 21:20:35,871 - masks.py - INFO: Номер карты замаскирован
+2024-12-16 21:20:35,871 - masks.py - INFO: Маскируем карту с номером 6010203040506070
+2024-12-16 21:20:35,872 - masks.py - INFO: Номер карты замаскирован
+2024-12-16 21:20:35,872 - masks.py - INFO: Маскируем счет с номером 73654108430135874305
+2024-12-16 21:20:35,873 - masks.py - INFO: Номер счета замаскирован
+2024-12-16 21:20:35,874 - masks.py - INFO: Маскируем карту с номером 7000792289606361
+2024-12-16 21:20:35,874 - masks.py - INFO: Номер карты замаскирован
+2024-12-16 21:20:35,875 - masks.py - INFO: Маскируем счет с номером 73654108430135874305
+2024-12-16 21:20:35,875 - masks.py - INFO: Номер счета замаскирован
+2024-12-16 21:20:35,878 - masks.py - INFO: Маскируем карту с номером 1
+2024-12-16 21:20:35,878 - masks.py - ERROR: введен некорректный номер карты - 1
+2024-12-17 21:01:58,619 - utils.py - INFO: Открываем файл C:\Users\Lenovo\PycharmProjects\George-s_repository\src\..\data\operations.json
+2024-12-17 21:01:58,626 - utils.py - INFO: Открыли файл C:\Users\Lenovo\PycharmProjects\George-s_repository\src\..\data\operations.json успешно
+2024-12-17 21:01:58,627 - utils.py - INFO: Содержание файла корректное, возвращаем список
+2024-12-17 21:04:32,525 - utils.py - INFO: Открываем файл C:\Users\Lenovo\PycharmProjects\George-s_repository\src\..\data\operations.json
+2024-12-17 21:04:32,526 - utils.py - INFO: Открыли файл C:\Users\Lenovo\PycharmProjects\George-s_repository\src\..\data\operations.json успешно
+2024-12-17 21:04:32,526 - utils.py - INFO: Содержание файла корректное, возвращаем список
+2024-12-17 21:07:08,657 - utils.py - INFO: Открываем файл C:\Users\Lenovo\PycharmProjects\George-s_repository\src\..\data\operations.json
+2024-12-17 21:07:08,657 - utils.py - INFO: Открыли файл C:\Users\Lenovo\PycharmProjects\George-s_repository\src\..\data\operations.json успешно
+2024-12-17 21:07:08,658 - utils.py - INFO: Содержание файла корректное, возвращаем список
+2024-12-17 21:09:07,731 - utils.py - INFO: Открываем файл C:\Users\Lenovo\PycharmProjects\George-s_repository\src\..\data\operations.json
+2024-12-17 21:09:07,731 - utils.py - INFO: Открыли файл C:\Users\Lenovo\PycharmProjects\George-s_repository\src\..\data\operations.json успешно
+2024-12-17 21:09:07,732 - utils.py - INFO: Содержание файла корректное, возвращаем список
+2024-12-17 21:10:36,971 - utils.py - INFO: Открываем файл C:\Users\Lenovo\PycharmProjects\George-s_repository\src\..\data\operations.json
+2024-12-17 21:10:36,971 - utils.py - INFO: Открыли файл C:\Users\Lenovo\PycharmProjects\George-s_repository\src\..\data\operations.json успешно
+2024-12-17 21:10:36,972 - utils.py - INFO: Содержание файла корректное, возвращаем список
