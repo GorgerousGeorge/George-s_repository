@@ -1,8 +1,8 @@
 import os
 
 from src.filereaders import reader_from_csv, reader_from_excel
+from src.processing import filter_by_description, filter_by_state, sort_by_date
 from src.utils import transaction_returner
-from src.processing import filter_by_state, sort_by_date, filter_by_description
 from src.widget import get_date, mask_account_card
 
 
@@ -94,7 +94,7 @@ def main():
             break
         else:
             print("Ответ не распознан")
-    print(f"Распечатываю итоговый список транзакций...\n")
+    print("Распечатываю итоговый список транзакций...\n")
     if len(transaction_list) == 0:
         print("Не найдено ни одной транзакции, подходящей под ваши условия фильтрации")
     else:
